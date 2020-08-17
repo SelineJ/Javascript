@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<style>
+    div {
+        ;
+        padding-left: 10px;
+    }
+    
+    body {
+        background-color: darkseagreen;
+        margin: 0;
+    }
+</style>
+
+<body>
+    <div>
+        <p>Oppgave 1</p>
+        <h2 id="aaa">Hvilken bokstav kommer etter A ?</h2>
+        <h2 id="a1" onclick="svar()">Å</h2>
+        <h2 id="a2" onclick="svar()">D</h2>
+        <h2 id="a3" onclick="svar()">B</h2>
+    </div>
+    <hr>
+
+    <script>
+        function svar() {
+            document.getElementById('a1').innerHTML = 'Feil';
+            document.getElementById('a2').innerHTML = 'Feil';
+            document.getElementById('a3').innerHTML = 'Riktig';
+        }
+    </script>
+</body>
+
+</html>
