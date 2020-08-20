@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+
+        
+    <title>Matte</title>
+    
+      
+
+    
+</head>
+<body onload="randomDiv()">
+    
+    <div id="resultat"></div>
+    <div id="resultatHtml" style="font-family: monospace"></div>
+    
+
+    
+</body>
+
+</html>
+<script>
+       
+        
+    var resultatDiv = document.getElementById('resultat');
+    var randomWidth = 50 + Math.floor(Math.random() * 1000);
+    var randomHeight = 50 + Math.floor(Math.random() * 1000);
+    var randomBorder = Math.floor(Math.random() * 20);
+    var resultatHtml = document.getElementById('resultatHtml');
+
+function randomDiv() {
+resultatDiv.innerHTML = '<div style=" background-color: blueviolet;'
++ 'width: ' + randomWidth + 'px;' 
++ 'height: ' + randomHeight + 'px;'
++ 'border: ' + randomBorder + 'px solid black;'
++ '>' + '"</div>';
+resultatHtml.innerText = 'Width: ' + randomWidth + 'px ' + 'Height: ' + randomHeight + 'px '
++ 'Border: ' + randomBorder + 'px'
+}
+    
+
+    /*function randomDiv() {
+   resultatDiv.style.width = randomWidth + 'px';
+   resultatDiv.style.height = randomHeight +'px';
+   resultatDiv.style.border = randomBorder + 'px'+ ' solid' + ' green';
+
+   }*/
+</script>
