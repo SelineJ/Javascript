@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="widthSlider" type="range" min="1" max="50" step="1" oninput="showDiv()" /> 
+    <input id="heightSlider" type="range" min="1" max="50" step="1" oninput="showDiv()" /> 
+    
+
+<div id="resultat" ></div>
+<div id="resultatHTML"></div>
+
+<script>
+    showDiv();
+    function showDiv(){
+   
+resultat.innerHTML = '<div style=" background-color: blueviolet; '
+ + 'width: ' + widthSlider.value + 'cm;' 
+ + 'height: ' + heightSlider.value + 'cm;' +
+  '">' + '<p>Areal: ' + widthSlider.value*heightSlider.value +'cm</p>' 
+  + '<p>Omkrets: ' + (widthSlider.value*2 + heightSlider.value*2) +'cm</p>' +
+  '</div>';
+
+ }
+ 
+</script>
+</body>
+</html>
