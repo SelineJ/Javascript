@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    
+    <title>Oppgave9</title>
+
+    <style>
+        body{
+            margin: 0;
+            background-color:darksalmon;
+        }
+
+        div{
+            text-align: center;
+            margin-top: 20px;
+            margin-left:40%;
+            width: 150px;
+            height: 50px;
+            background-color:rgb(241, 212, 240);
+            border:rgb(200, 250, 247) solid 2px;
+            
+            
+
+        }
+
+        #checkbokser {
+            width: 350px;
+            margin-left: 35%;
+            display: inline-table;
+        }
+        
+       
+    
+.stil1{
+    padding: 40px;
+   
+
+}
+
+.stil2{ 
+    background-color: darkgoldenrod;
+
+}
+.stil3{
+    color: pink;
+
+}
+.stil4{
+    border: dashed purple 3px;
+}
+
+.stil5{
+    border-radius: 10px;
+}
+.selected {
+  border: solid yellow 3px;
+}
+
+
+    </style>
+</head>
+<body>
+    <div id="a" onclick="valgt(this);">Choose me!</div> 
+    <div id="a" onclick="valgt(this);">Choose me!</div>
+    <div id="a" onclick="valgt(this);">Choose me!</div>
+    <div id="a" onclick="valgt(this);">Choose me!</div>
+    <div id="a" onclick="valgt(this);">Choose me!</div>
+    <br>
+
+<div id="checkbokser">
+    <input id="strl" type="checkbox" onchange="toggleStyle(this);">Size</input>
+    <input id="bakgrunn" type="checkbox" onchange="toggleStyle1(this);">Background</input>
+    <input id="marg" type="checkbox" onchange="toggleStyle2(this);">Text color</input> <br>
+    <input id="bord" type="checkbox" onchange="toggleStyle3(this);">Border</input>
+    <input id="bRadius" type="checkbox" onchange="toggleStyle4(this);">Border Radius</input>
+</div>
+    <script>
+
+
+        var strl = document.getElementById('strl');
+        var bakgrunn = document.getElementById('bakgrunn');
+        var marg = document.getElementById('marg');
+        var bord = document.getElementById('bord');
+        var bRadius = document.getElementById('bRadius');
+
+        var diver = document.getElementsByTagName('div');
+        var valg = diver[Math.floor(Math.random() * diver.length)];
+
+        valgt(ok);
+ 
+       function valgt(lol) {
+
+            valg.classList.remove('selected');
+            valg = lol;
+            valg.classList.add('selected');
+         
+       }
+
+        function toggleStyle(ok) {
+            valg.classList.remove('selected');
+         document.getElementById('strl').checked;
+        valg.classList.toggle('stil1');     
+        document.getElementById('strl').checked = valg.classList.contains('stil1');
+            document.getElementById('bakgrunn').checked = valg.classList.contains('stil2');
+            document.getElementById('marg').checked = valg.classList.contains('stil3');
+            document.getElementById('bord').checked = valg.classList.contains('stil4');
+            document.getElementById('bRadius').checked = valg.classList.contains('stil5');
+        
+
+        }
+        function toggleStyle1(ok) {
+            valg.classList.remove('selected');
+         document.getElementById('bakgrunn').checked;
+        valg.classList.toggle('stil2');     
+        document.getElementById('strl').checked = valg.classList.contains('stil1');
+            document.getElementById('bakgrunn').checked = valg.classList.contains('stil2');
+            document.getElementById('marg').checked = valg.classList.contains('stil3');
+            document.getElementById('bord').checked = valg.classList.contains('stil4');
+            document.getElementById('bRadius').checked = valg.classList.contains('stil5');
+        }
+        function toggleStyle2(ok) {
+            valg.classList.remove('selected');
+         document.getElementById('marg').checked;
+        valg.classList.toggle('stil3');     
+        document.getElementById('strl').checked = valg.classList.contains('stil1');
+            document.getElementById('bakgrunn').checked = valg.classList.contains('stil2');
+            document.getElementById('marg').checked = valg.classList.contains('stil3');
+            document.getElementById('bord').checked = valg.classList.contains('stil4');
+            document.getElementById('bRadius').checked = valg.classList.contains('stil5');
+        }
+        function toggleStyle3(ok) {
+            valg.classList.remove('selected');
+         document.getElementById('bord').checked;
+        valg.classList.toggle('stil4');     
+        document.getElementById('strl').checked = valg.classList.contains('stil1');
+            document.getElementById('bakgrunn').checked = valg.classList.contains('stil2');
+            document.getElementById('marg').checked = valg.classList.contains('stil3');
+            document.getElementById('bord').checked = valg.classList.contains('stil4');
+            document.getElementById('bRadius').checked = valg.classList.contains('stil5');
+        }
+        function toggleStyle4(ok) {
+            valg.classList.remove('selected');
+         document.getElementById('bRadius').checked;
+        valg.classList.toggle('stil5');     
+        document.getElementById('strl').checked = valg.classList.contains('stil1');
+            document.getElementById('bakgrunn').checked = valg.classList.contains('stil2');
+            document.getElementById('marg').checked = valg.classList.contains('stil3');
+            document.getElementById('bord').checked = valg.classList.contains('stil4');
+            document.getElementById('bRadius').checked = valg.classList.contains('stil5');
+        }
+      
+        
+    </script>
+</body>
+</html>
