@@ -60,7 +60,7 @@
     </style>
 </head>
 <body>
-    <div id="a" onclick="valgt(this);">Choose me!</div> 
+    <div id="b" onclick="valgt(this);">Choose me!</div> 
     <div id="a" onclick="valgt(this);">Choose me!</div>
     <div id="a" onclick="valgt(this);">Choose me!</div>
     <div id="a" onclick="valgt(this);">Choose me!</div>
@@ -84,7 +84,7 @@
         var bRadius = document.getElementById('bRadius');
 
         var diver = document.getElementsByTagName('div');
-        var valg = diver[Math.floor(Math.random() * diver.length)];
+        var valg = document.getElementById('b');
 
         valgt(ok);
  
