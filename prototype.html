@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="innhold">
+        Jeg tenker på et tall mellom 1 og 20. Tipp hvilket!<br>
+        <input type="text" /> <button onclick="tipp1()">Tipp</button>
+    </div>
+  <script> 
+function tipp1() {
+    document.getElementById('innhold').innerHTML = `Du tippet 27. Det er for høy - tipp igjen! <br/>
+<input type="text"/><button onclick="tipp2()">Tipp</button>`;
+}
+
+function tipp2(){
+document.getElementById('innhold').innerHTML = `
+Du tippet 12 - og det er riktig! <br/>
+<button onclick="tipp3()">Start på nytt</button>`;
+}
+
+function tipp3(){
+document.getElementById('innhold').innerHTML = ` <button onclick="oV()">Hei</button>`;
+}
+
+function oV(){
+    document.getElementById('innhold').innerHTML = `<iframe width="560" height="315" src="https://www.youtube.com/embed/JuzgxAEvSDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+}
+
+
+</script>
+    
+</body>
+</html>
